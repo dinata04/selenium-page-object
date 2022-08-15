@@ -8,7 +8,7 @@ public class DriverStrategyImplementer {
 			return new Chrome();
 		
 		case "Firefox":
-			return new Firefox();
+			return new FIrefox();
 
 		default:
 			return null;

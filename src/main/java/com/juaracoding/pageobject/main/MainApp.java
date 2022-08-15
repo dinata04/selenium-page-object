@@ -1,7 +1,8 @@
 package com.juaracoding.pageobject.main;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 
 import com.juaracoding.pageobject.drivers.DriverSingleton;
 import com.juaracoding.pageobject.pages.LoginPage;
@@ -12,12 +13,13 @@ public class MainApp {
 		
 		DriverSingleton.getInstance("Chrome");
 		WebDriver driver = DriverSingleton.getDriver();
-		String url = "https://www.google.com";
+		String url = "https://shop.demoqa.com/";
 		driver.get(url);
+		driver.findElement(By.xpath("//a[normalize-space()='My Account']")).click();
 		
+//		TEST LOGIN
 		LoginPage loginPage = new LoginPage();
-		loginPage.login("Admin","admin123");
-		
+		loginPage.login("hendi1234","Posttest14");
 		
 		
 		delay(3);
